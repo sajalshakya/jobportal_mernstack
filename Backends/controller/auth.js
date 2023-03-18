@@ -45,7 +45,7 @@ const employerLogin =  async(req,res,next) => {
             msg:"Invalid Credentials"
         })
     }catch(err){
-        console.log(err);
+        next(err);
     }
 }
 
@@ -66,7 +66,7 @@ const clientSignup = async(req,res,next) => {
         delete client.password
         res.send(client)
     }catch(err){
-        console.log(err);
+        next(err);
     }
 }
 
@@ -87,7 +87,7 @@ const clientLogin = async(req,res,next) => {
             msg: "invalid credentials"
         })
         }catch(err){
-        console.log(err);
+            next(err);
     }
 }
 

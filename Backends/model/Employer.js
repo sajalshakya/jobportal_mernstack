@@ -23,6 +23,7 @@ const EmployerSchema = new Schema({
     company_contact: {
         type: Number,
         required: true,
+        unique:true
     },
     description: {
         type: String,
@@ -45,6 +46,7 @@ const EmployerSchema = new Schema({
     person_contact: {
         type: Number,
         required: true,
+        unique: true
     },
     password: {
         type: String,

@@ -14,7 +14,7 @@ const employerSignup_middleware = expressValidate([
     body('password').notEmpty().isLength({ min: 8 }).withMessage("Invalid Field"),
 ])
 const employerLogin_middleware = expressValidate([
-    body('email').isEmail().notEmpty().withMessage("Invalid Field"),
+    body('company_email').isEmail().notEmpty().withMessage("Invalid Field"),
     body('password').notEmpty().isLength({ min: 8 }).withMessage("Invalid Field"),
 ])
 
